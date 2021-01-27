@@ -12,12 +12,14 @@ let primaryColor = Color("Orange")
 
 struct ContentView: View {
     
-    let rows = [
-        ["7", "8", "9", "÷"],
-        ["4", "5", "6", "×"],
-        ["1", "2", "3", "−"],
-        [".", "0", "=", "×"]
-    ]
+    // The previous array with keyboard buttons was moved to the KeyboardButtons enum for better navigation on the keyboard in UI Tests.
+    
+    let rows: [[String]] = [
+            [KeyboardButtons.seven.rawValue, KeyboardButtons.eight.rawValue, KeyboardButtons.nine.rawValue, KeyboardButtons.divide.rawValue],
+            [KeyboardButtons.four.rawValue, KeyboardButtons.five.rawValue, KeyboardButtons.six.rawValue, KeyboardButtons.multiply.rawValue],
+            [KeyboardButtons.one.rawValue, KeyboardButtons.two.rawValue, KeyboardButtons.three.rawValue, KeyboardButtons.subtract.rawValue],
+            [KeyboardButtons.dot.rawValue, KeyboardButtons.zero.rawValue, KeyboardButtons.equal.rawValue, KeyboardButtons.add.rawValue]
+            ]
     
     @State var noBeingEntered: String = ""
     @State var finalValue:String = "CXTS"
@@ -27,10 +29,12 @@ struct ContentView: View {
         VStack {
             VStack {
                 Text(self.finalValue)
+                    .accessibility(identifier: AccessibilityIdentifiers.Calculator.resultValueText)
                     .font(Font.custom("HelveticaNeue-Thin", size: 78))
                     .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .center)
                     .foregroundColor(Color.black)
                 Text(flattenTheExpression(exps: calExpression))
+                    .accessibility(identifier: AccessibilityIdentifiers.Calculator.inputValueText)
                     .font(Font.custom("HelveticaNeue-Thin", size: 24))
                     .frame(alignment: Alignment.bottomTrailing)
                     .foregroundColor(Color.black)
