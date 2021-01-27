@@ -138,6 +138,7 @@
 				462FC31225C17AC800EE5314 /* Tests */,
 				59CF9D1F25B0342500DBFEA7 /* Info.plist */,
 				462FC31B25C17B3E00EE5314 /* AccessibilityIdentifiers.swift */,
+
 			);
 			path = "Calculator SwiftUIUITests";
 			sourceTree = "<group>";

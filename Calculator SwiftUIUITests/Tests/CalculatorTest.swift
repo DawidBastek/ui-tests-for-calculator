@@ -24,7 +24,6 @@ final class CalculatorUITest: BaseSetupTest {
         XCTAssertEqual(calculatorScreen.displayResultValue(), "0.0")
     }
     
-    
     func testVerifyIfAllMathSymbolsAreNotDisplayed() {
         calculatorScreen.tapOnKeyboard(button: KeyboardButtons.divide)
         XCTAssertEqual(calculatorScreen.displayInputValue(), "")
