@@ -8,7 +8,7 @@ final class CalculatorScreen {
     private let calculatorPage = CalculatorPage()
         
     func tapOnKeyboard(button: KeyboardButtons) {
-        calculatorPage.buttonWithValue[button.rawValue].tap()
+        calculatorPage.buttonsWithValue[button.rawValue].tap()
     }
     
     func displayInputValue() -> String {
