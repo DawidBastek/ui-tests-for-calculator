@@ -27,6 +27,5 @@
   3. Enter math operator i.e. "+"
   4. Observe crash
 
-
   Tested on:
    iOS simulator: iPhone 11 (OS: 14.3)
