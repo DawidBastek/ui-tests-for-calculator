@@ -1,0 +1,32 @@
+1. Description:
+   App crashes after changing math operator during the same operation i.e. from minus to plus.
+
+   Expected Results:
+   App Doesn't crash and it is possible to change operator during operation.
+
+   Steps to reproduce:
+   1. Open the app
+   2. Enter number i.e. "1"
+   3. Enter math operator i.e. "+"
+   4. Enter math operator i.e. "-"
+   5. Observe crash
+
+   Tested on:
+   iOS simulator: iPhone 11 (OS: 14.3)
+
+
+2. Description:
+   App crashes after adding another dot into the number and performing math operations.
+ 
+  Expected Results:
+  There is no possibility to add another dot into the namber.
+
+  Steps to reproduce:
+  1. Open the app
+  2. Enter number separated by dots after each char i.e. "1.0.2"
+  3. Enter math operator i.e. "+"
+  4. Observe crash
+
+
+  Tested on:
+   iOS simulator: iPhone 11 (OS: 14.3)
